@@ -4,73 +4,609 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hira — Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="Hira — Namaz Vakti, Kıble uygulamasının gizlilik politikası. Türkçe ve English.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index, follow">
 <style>
-:root { color-scheme: light dark; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
-h1 { font-size: 1.7rem; margin-bottom: 4px; }
-h2 { font-size: 1.15rem; margin-top: 32px; border-bottom: 1px solid #8884; padding-bottom: 4px; }
-.date { font-weight: 600; }
-.lang { margin-top: 56px; border-top: 3px solid #8884; padding-top: 24px; }
-code { background: #8882; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1c1b19;
+    --muted: #5d5a54;
+    --rule: #e3ded4;
+    --accent: #0d6b4f;
+    --accent-soft: #eef4f1;
+    --code-bg: #f2efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --surface: #1b1e23;
+      --text: #e9e7e2;
+      --muted: #a7a49d;
+      --rule: #2c3037;
+      --accent: #6fd0aa;
+      --accent-soft: #1d2a26;
+      --code-bg: #23272e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 1.75rem 1.15rem 4rem;
+  }
+  header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .app-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin: 0 0 .15rem;
+  }
+  .app-sub { margin: 0; color: var(--muted); font-size: .95rem; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 1.4rem 0 .5rem; }
+  h2 {
+    font-size: 1.18rem;
+    line-height: 1.3;
+    margin: 2.2rem 0 .6rem;
+    padding-top: .3rem;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .4rem; }
+  p { margin: .7rem 0; }
+  ul { margin: .7rem 0; padding-left: 1.25rem; }
+  li { margin: .38rem 0; }
+  a { color: var(--accent); text-overflow: ellipsis; overflow-wrap: anywhere; }
+  .meta {
+    color: var(--muted);
+    font-size: .9rem;
+    margin: .35rem 0 0;
+  }
+  .langbar {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .langbar a {
+    display: inline-block;
+    padding: .4rem .8rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--surface);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+  .callout {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: .85rem 1rem;
+    margin: 1.2rem 0;
+  }
+  .callout p:first-child { margin-top: 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  code {
+    background: var(--code-bg);
+    padding: .1em .35em;
+    border-radius: 4px;
+    font-size: .88em;
+    overflow-wrap: anywhere;
+  }
+  .divider {
+    margin: 3.5rem 0 0;
+    border: 0;
+    border-top: 2px solid var(--rule);
+  }
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  @media (max-width: 420px) {
+    body { font-size: 16px; }
+    .wrap { padding: 1.25rem .95rem 3rem; }
+    h1 { font-size: 1.4rem; }
+  }
 </style>
 </head>
 <body>
-<h1>Hira — Gizlilik Politikası</h1>
-<p class="date">Yürürlük tarihi: 2 Eylül 2026 · İletişim: cemgnr46@gmail.com</p>
-<h2>Özet</h2>
-<p>Hira'nın sunucusu ve kullanıcı hesabı yoktur. İbadet verileriniz (ayarlar, zikir sayacı, yer imi, kaza defteri, seri kaydı) yalnızca cihazınızda saklanır ve bize hiçbir zaman gönderilmez. Uygulamayı ücretsiz tutabilmek için Google AdMob reklamları gösterilir; reklam sunumu için Google sınırlı cihaz verisi işler.</p>
-<h2>Bizim topladığımız veriler</h2>
-<p>Hira kendi adına hiçbir kişisel veriyi toplamaz, saklamaz veya iletmez. Sunucumuz yok, hesabınız yok.</p>
-<h2>Konum</h2>
-<p>Konumunuz namaz vakitlerini ve kıble yönünü hesaplamak için kullanılır; bu hesaplamaların tamamı cihazınızın içinde, çevrimdışı yapılır.</p>
-<p>Konumunuz yalnızca şu iki durumda ve yalnızca o an, cihazınızdan dışarı çıkar:</p>
+<div class="wrap">
+
+<header class="masthead">
+  <p class="app-name">Hira — Namaz Vakti, Kıble</p>
+  <p class="app-sub">iOS &amp; Android · <code>app.hira.hira</code></p>
+  <nav class="langbar">
+    <a href="#tr">Türkçe</a>
+    <a href="#en">English</a>
+  </nav>
+</header>
+
+<!-- ==================== TÜRKÇE ==================== -->
+<main id="tr">
+
+<h1>Gizlilik Politikası</h1>
+<p class="meta">Yürürlük tarihi: 5 Eylül 2026 · Son güncelleme: 5 Eylül 2026</p>
+
+<div class="callout">
+  <p><strong>Kısaca:</strong> Hira'nın sunucusu yok, hesap sistemi yok. İbadet
+  verilerin telefonunda kalır ve uygulamayı silersen onlarla birlikte gider.
+  Konumun namaz vakti ve kıble hesabı için cihazında kullanılır; yalnızca
+  şehir adını yazmak, adres aramak ve yakındaki camileri bulmak için ilgili
+  sorgu sırasında OpenStreetMap'e gönderilir. Uygulamayı ücretsiz tutabilmek
+  için Google AdMob reklam gösterir; reklamlarla ilgili veriyi Google işler.</p>
+</div>
+
+<h2>1. Bu politika kimin?</h2>
+<p>Hira'yı bağımsız bir geliştirici olarak tek başıma yayınlıyorum. Bir şirket,
+tüzel kişilik ya da ekip yok. Gizlilikle ilgili her soru, talep ve şikâyet
+doğrudan bana ulaşır:</p>
 <ul>
-<li><strong>Şehir adını göstermek için:</strong> koordinatınız OpenStreetMap (Nominatim) servisine gönderilir ve karşılığında yalnızca şehir adı alınır. Saklanmaz, kimliğinizle ilişkilendirilmez.</li>
-<li><strong>Yakındaki camileri bulmak için:</strong> siz cami bulucuyu açtığınızda koordinatınız OpenStreetMap (Overpass) servisine gönderilir ve yalnızca o arama tamamlanır.</li>
+  <li>E-posta: <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a></li>
 </ul>
-<p>Bunların dışında konumunuz hiçbir yere gönderilmez.</p>
-<h2>Reklamlar</h2>
-<p>Reklamlar Google AdMob ile sunulur. Google, reklam sunumu ve ölçümü için reklam kimliği gibi sınırlı cihaz verisi işleyebilir. Reklamlardan önce size Google UMP onay formu gösterilir; kişiselleştirilmemiş reklamları seçebilir ve tercihinizi daha sonra Ayarlar &gt; Reklam gizliliği seçeneklerinden değiştirebilirsiniz. Cihaz ayarlarınızdan reklam kimliğinizi sıfırlayabilir ya da reklam kişiselleştirmesini kapatabilirsiniz.</p>
-<p>Reklamlar ibadet anlarına saygı gösterir: namaz vakitlerinin çevresinde ve Kıble ekranında reklam gösterilmez.</p>
-<h2>Bildirimler</h2>
-<p>Namaz vakti hatırlatıcıları cihazda yerel olarak üretilir; internet ya da sunucu kullanılmaz.</p>
-<h2>İnternet kullanımı</h2>
-<p>Temel özellikler çevrimdışı çalışır. İsteğe bağlı çevrimiçi özellikler yalnızca siz başlattığınızda bağlanır: Kur'an metni (alquran.cloud), tilavet sesi (everyayah.com), şehir adı ve cami bulucu (OpenStreetMap) ve reklamlar (Google AdMob).</p>
-<h2>Çocukların gizliliği</h2>
-<p>Hira her yaşa uygundur ve çocuklardan bilerek hiçbir veri toplamaz.</p>
-<h2>Değişiklikler</h2>
-<p>Bu politikayı güncellersek bu sayfanın en üstündeki <strong>yürürlük tarihini</strong> değiştirir ve güncel metni yine bu sayfada yayımlarız.</p>
-<h2>İletişim</h2>
-<p>Sorularınız için: cemgnr46@gmail.com</p>
-<div class="lang">
-<h1>Hira — Privacy Policy</h1>
-<p class="date">Effective date: 2 September 2026 · Contact: cemgnr46@gmail.com</p>
-<h2>Summary</h2>
-<p>Hira has no server and no user account. Your worship data (settings, dhikr counter, bookmark, qada ledger, streak history) is stored only on your device and is never sent to us. Google AdMob ads are shown to keep the app free; Google processes limited device data to serve them.</p>
-<h2>Data we collect</h2>
-<p>Hira collects, stores and transmits no personal data of its own. We have no server and you have no account.</p>
-<h2>Location</h2>
-<p>Your location is used to calculate prayer times and the qibla direction. All of that calculation happens on your device, offline.</p>
-<p>Your coordinates leave your device only in these two cases, and only at that moment:</p>
+<p>Bu politika <strong>Hira — Namaz Vakti, Kıble</strong> uygulamasının iOS ve
+Android sürümlerini kapsar.</p>
+
+<h2>2. Hesap yok, sunucu yok</h2>
+<p>Hira'ya kayıt olmuyorsun. Ad, e-posta, telefon numarası, parola istemiyorum.
+Uygulamanın bağlandığı bir sunucum yok; senin verini toplayan, saklayan ya da
+başkasına satan bir arka uç hiç kurulmadı. Bu yüzden "hesabımı silin" diye
+yazacağın bir yer de yok — silinecek bir hesap oluşmuyor.</p>
+
+<h2>3. Telefonunda kalan veriler</h2>
+<p>Uygulamanın tuttuğu her şey, işletim sisteminin uygulamalara ayırdığı özel
+alanda (iOS'ta <code>UserDefaults</code>, Android'de
+<code>SharedPreferences</code>) <strong>yalnızca senin cihazında</strong>
+saklanır. Bunlar bana gönderilmez, benim erişimim yoktur:</p>
 <ul>
-<li><strong>To show your city name:</strong> your coordinates are sent to OpenStreetMap (Nominatim), which returns the city name only. It is not stored and not linked to your identity.</li>
-<li><strong>To find nearby mosques:</strong> when you open the mosque finder, your coordinates are sent to OpenStreetMap (Overpass) solely to complete that one search.</li>
+  <li>Ayarların: dil, hesaplama yöntemi, ikindi yöntemi, yüksek enlem kuralı,
+      vakit düzeltmeleri, hicri takvim düzeltmesi, ezan sesi, bildirim
+      tercihleri, odak modu, ortam sesi ve ses düzeyi.</li>
+  <li>Seçtiğin konum bilgisi: şehir etiketi, enlem, boylam, rakım ve saat
+      dilimi.</li>
+  <li>Zikirmatik: seçtiğin zikir, sayaç, hedef ve kendi yazdığın özel zikir
+      metni ile anlamı.</li>
+  <li>Kur'an okuma yerin: açık sure, ayet, yazı boyutu ve meal gösterimi
+      tercihi.</li>
+  <li>İbadet kaydın: kıldığını işaretlediğin namazlar, seri (streak) sayacın,
+      kaza defterinin işlenme durumu ve toplam sayaçların.</li>
+  <li>Kadınlar için muafiyet günleri: âdet günleri ve döngü bilgisi
+      (bu günlerde namaz kaydının doğru sayılabilmesi için). Bu kayıt da
+      sadece cihazında durur, hiçbir yere gönderilmez.</li>
+  <li>Cami bulucunun son sonuçları: ağ yokken de listeyi gösterebilmek için
+      en fazla 10 bölge, en çok 7 gün boyunca cihazda önbelleğe alınır.</li>
+  <li>Ödüllü reklam izlediysen kazandığın reklamsız sürenin bitiş zamanı.</li>
 </ul>
-<p>Your location is not sent anywhere else.</p>
-<h2>Advertising</h2>
-<p>Ads are served by Google AdMob. Google may process limited device data such as an advertising identifier to serve and measure ads. You are shown a Google UMP consent form before any ads; you may choose non-personalised ads and change your choice later under Settings &gt; Ad privacy options. You can reset your advertising ID or opt out of ad personalisation in your device settings.</p>
-<p>Ads respect worship moments: none are shown around prayer times or on the Qibla screen.</p>
-<h2>Notifications</h2>
-<p>Prayer-time reminders are generated locally on the device; no internet or server is involved.</p>
-<h2>Internet use</h2>
-<p>Core features work offline. Optional online features connect only when you initiate them: Quran text (alquran.cloud), recitation audio (everyayah.com), city name and mosque finder (OpenStreetMap), and ads (Google AdMob).</p>
-<h2>Children's privacy</h2>
-<p>Hira is suitable for all ages and knowingly collects no data from children.</p>
-<h2>Changes</h2>
-<p>If we update this policy we will change the <strong>effective date at the top of this page</strong> and publish the updated text here.</p>
-<h2>Contact</h2>
-<p>Questions: cemgnr46@gmail.com</p>
+<p><strong>Silmek istersen:</strong> uygulamayı kaldırman yeterli. Kaldırma
+işlemi bu verilerin tamamını cihazdan siler. Bunun bir yedeği bende yok, geri
+getirilemez. (Telefonunun kendi yedekleme ayarları — iCloud ya da Google
+yedeklemesi — bu veriyi yedeğe almış olabilir; orası senin cihaz ayarlarının
+kontrolündedir.)</p>
+
+<h2>4. Konum</h2>
+
+<h3>4.1 Hesaplama cihazında yapılır</h3>
+<p>Namaz vakitleri ve kıble yönü, konumundan <strong>tamamen telefonun
+içinde</strong> hesaplanır. Bu hesap için hiçbir sunucuya bir şey gönderilmez.
+Konum iznini vermezsen uygulama çalışmaya devam eder; şehri elle seçebilirsin.</p>
+
+<h3>4.2 Şehir adı ve adres araması (OpenStreetMap / Nominatim)</h3>
+<p>Ekranda "Mevcut konum" yerine şehrinin adını yazabilmek için koordinatın
+(enlem ve boylam) <code>nominatim.openstreetmap.org</code> adresine gönderilir
+ve karşılığında yer adı alınır. Aynı şekilde, arama kutusuna bir şehir ya da
+adres yazıp aratırsan <strong>yazdığın metin</strong> aynı servise gönderilir.</p>
+<p>Bu istekler yalnızca o sorgu için yapılır. Sonuç geldiğinde iş biter;
+gönderilen koordinat ya da arama metni benim tarafımda hiçbir yerde
+saklanmaz — saklayacak bir sunucum yok.</p>
+
+<h3>4.3 Yakındaki camiler (Overpass API)</h3>
+<p>Cami bulucuyu açtığında koordinatın ve arama yarıçapın, OpenStreetMap
+verisini sorgulayan açık Overpass sunucularına gönderilir. Uygulama sırasıyla
+şu genel uç noktaları dener (biri yanıt vermezse sıradakine geçer):
+<code>overpass-api.de</code>, <code>overpass.kumi.systems</code>,
+<code>overpass.private.coffee</code>, <code>overpass.osm.ch</code>. Bunlar
+gönüllülerin işlettiği kamuya açık sunuculardır; benim işlettiğim sunucular
+değildir ve her birinin kendi kullanım/kayıt politikası vardır.</p>
+
+<h3>4.4 Bu servisler ne görür?</h3>
+<p>Her internet isteğinde olduğu gibi, bu servisler isteğin geldiği
+<strong>IP adresini</strong> ve gönderilen sorguyu (koordinat ya da yazdığın
+adres) görür. Uygulama bu isteklere senin kim olduğunu söyleyen bir kimlik,
+kullanıcı numarası ya da reklam kimliği <strong>eklemez</strong>. Bu servisler
+OpenStreetMap topluluğuna aittir; kendi gizlilik koşulları için
+<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
+Foundation gizlilik politikasına</a> bakabilirsin.</p>
+
+<h2>5. Kur'an metni ve tilavet</h2>
+<p>Uygulamada dört sure telefona gömülü gelir ve internetsiz çalışır. Bunun
+dışındaki sureleri açtığında metin <code>api.alquran.cloud</code> adresinden,
+sesli tilavet ise <code>everyayah.com</code> adresinden indirilir. Bir kez
+açtığın sure cihazında önbelleğe alınır ve sonrasında çevrimdışı da okunur.</p>
+<p>Bu isteklerde de sadece hangi sureyi/ayeti istediğin bilgisi gider; kimliğin
+gönderilmez. İlgili sunucular, her web isteğinde olduğu gibi IP adresini
+görür.</p>
+
+<h2>6. Reklamlar (Google AdMob)</h2>
+<p>Hira ücretsizdir ve <strong>Google AdMob</strong> reklamlarıyla ayakta
+durur. Reklamları Google sunar; reklam gösterimi ve ölçümü için gereken veriyi
+de <strong>Google işler</strong>. Google'ın kendi açıklamasına göre bu veriler
+şunları içerebilir:</p>
+<ul>
+  <li>IP adresi,</li>
+  <li>uygulama içindeki etkileşimler (reklamın görüntülenmesi, tıklanması
+      gibi),</li>
+  <li>tanılama (diagnostics) ve çökme/performans verisi,</li>
+  <li>reklam kimliği (iOS'ta IDFA, Android'de Reklam Kimliği) ile diğer cihaz
+      ve hesap tanımlayıcıları.</li>
+</ul>
+<p>Google'ın bu veriyi nasıl kullandığını
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+adresinden okuyabilirsin.</p>
+<p>Benim bir reklam sunucum, izleme altyapım veya analitik aracım yok.
+Uygulamada Google AdMob dışında herhangi bir analitik, ölçüm veya çökme
+raporlama SDK'sı bulunmuyor.</p>
+
+<h3>6.1 Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre</h3>
+<p>Bu bölgelerdeysen, reklamlar başlamadan önce karşına Google'ın onay formu
+(UMP — User Messaging Platform) çıkar. Orada kişiselleştirilmiş reklamlara izin
+verebilir ya da <strong>kişiselleştirilmemiş reklamları</strong> seçebilirsin.
+Uygulama, sen bu formda izin vermeden reklam SDK'sını başlatmaz.</p>
+<p>Kararını sonradan değiştirmek istersen:
+<em>Ayarlar → Reklam gizlilik seçenekleri</em> satırından aynı formu yeniden
+açabilirsin. (Bu satır, yalnızca onayın gerekli olduğu bölgelerde çalışır.)</p>
+
+<h3>6.2 iOS'ta izleme izni (App Tracking Transparency)</h3>
+<p>iOS'ta, reklam kimliğinin (IDFA) reklam kişiselleştirmesinde kullanılıp
+kullanılamayacağını Apple'ın <strong>izleme izni penceresi</strong> belirler.
+Bu pencere sana sorulur ve <strong>verdiğin karara uyulur</strong>: izin
+vermezsen uygulama bu kimliği kullanmaz, reklamlar kişiselleştirilmemiş olarak
+gösterilir. İzni reddetmen uygulamanın hiçbir özelliğini kapatmaz — namaz
+vakitleri, kıble, Kur'an, zikirmatik, hepsi aynen çalışır.</p>
+<p>Kararını sonradan değiştirmek için:
+<em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em> yolundan Hira'nın iznini
+açıp kapatabilirsin.</p>
+
+<h3>6.3 Reklam kimliğini sıfırlamak veya kapatmak</h3>
+<ul>
+  <li><strong>iOS:</strong> <em>Ayarlar → Gizlilik ve Güvenlik → İzleme</em>
+      bölümünden "Uygulamaların İzleme İzni İstemesine Olanak Tan"ı kapatırsan
+      uygulamalara verilen reklam kimliği geçersiz kılınır.</li>
+  <li><strong>Android:</strong> <em>Ayarlar → Google → Reklamlar</em> (bazı
+      cihazlarda <em>Ayarlar → Gizlilik → Reklamlar</em>) bölümünden reklam
+      kimliğini sıfırlayabilir ya da tamamen silebilirsin.</li>
+</ul>
+
+<h3>6.4 Reklamın gösterilmediği anlar</h3>
+<p>Reklam, ibadetin önüne geçmesin diye sınırlandırılmıştır:</p>
+<ul>
+  <li>Namaz vaktine <strong>10 dakika kala</strong> ve vakit girdikten sonraki
+      <strong>20 dakika boyunca</strong> hiçbir reklam gösterilmez — banner
+      da o süre boyunca ekrandan kalkar.</li>
+  <li>Kıble sekmesine geçerken <strong>tam ekran (geçiş) reklamı asla
+      açılmaz</strong>; namaza hazırlanan birinin önü kesilmez. (Alt
+      şeritteki küçük banner, yukarıdaki vakit korumasının dışındaki
+      zamanlarda Kıble ekranında da görünebilir.)</li>
+  <li>Odak Modu açıkken banner gösterilmez.</li>
+  <li>Kur'an tilaveti ya da ortam sesi çalarken tam ekran reklam açılmaz.</li>
+  <li>Uygulamayı açtıktan sonraki ilk 2 dakika, tanıtım ekranları ve bir
+      oturumda 5 gösterimden fazlası için reklam yoktur; iki tam ekran reklam
+      arasında en az 12 dakika vardır.</li>
+  <li>Reklam içeriği <strong>"genel izleyici" (G)</strong> seviyesiyle
+      sınırlandırılmıştır; uygulamanın yaş derecelendirmesinin üstünde içerik
+      istenmez.</li>
+</ul>
+<p>İstersen ödüllü bir reklam izleyerek 6 saatlik reklamsız süre
+kazanabilirsin. Bu tamamen senin tercihindir.</p>
+
+<h2>7. İzinler ve neden istendikleri</h2>
+<ul>
+  <li><strong>Konum:</strong> namaz vakti ve kıble hesabı, şehir adı ve cami
+      bulucu için. Vermezsen şehri elle seçersin.</li>
+  <li><strong>Hareket sensörleri:</strong> kıble pusulasının telefonun yönünü
+      algılaması için. Bu veri cihazdan çıkmaz.</li>
+  <li><strong>Bildirimler:</strong> ezan ve vakit hatırlatmaları için.
+      Bildirimler <strong>cihazın kendi içinde</strong> planlanır; bunun için
+      hiçbir sunucuya bağlanılmaz, "push" bildirimi gönderilmez.</li>
+  <li><strong>Mikrofon:</strong> Hira <strong>ses kaydetmez</strong>. Bu izin,
+      yalnızca ezan ve Kur'an tilavetini çalan ses altyapısı tarafından
+      istenir.</li>
+  <li><strong>Fotoğraflara ekleme:</strong> seri kartını Fotoğraflar'a
+      kaydetmeyi seçersen görsel oraya eklenir. Uygulama fotoğraflarını
+      okumaz, silmez.</li>
+  <li><strong>Titreşim:</strong> zikirmatikte dokunsal geri bildirim için.</li>
+</ul>
+
+<h2>8. Paylaşma</h2>
+<p>Seri kartını paylaşmayı seçersen görsel önce cihazın geçici klasöründe
+oluşturulur, sonra telefonun kendi paylaşım penceresi açılır. Nereye
+göndereceğine sen karar verirsin; ben bu görseli görmem ve hiçbir yere
+kopyalamam.</p>
+
+<h2>9. Çocukların gizliliği</h2>
+<p>Hira <strong>genel izleyici kitlesine</strong> yönelik bir ibadet
+uygulamasıdır; çocuklara yönelik olarak tasarlanmamış ve çocuklara
+pazarlanmamıştır. Bilerek çocuklardan kişisel veri toplamam — zaten hiç
+kimseden kişisel veri toplayan bir sunucum yok. Reklam içeriği, uygulamanın
+yaş derecelendirmesiyle uyumlu olsun diye <strong>"genel izleyici" (G)</strong>
+seviyesiyle sınırlandırılmıştır. Çocuğunun uygulamayı kullandığını düşünüyor
+ve bir endişen varsa bana yaz, birlikte bakalım.</p>
+
+<h2>10. Güvenlik</h2>
+<p>Uygulamanın yaptığı tüm ağ istekleri HTTPS üzerinden şifreli gider.
+Cihazında duran veriler, işletim sisteminin uygulama başına ayırdığı korumalı
+alanda tutulur ve diğer uygulamalar tarafından okunamaz.</p>
+
+<h2>11. Bu politika değişirse</h2>
+<p>Uygulama değiştikçe bu sayfa da güncellenir. Değişiklikte üstteki yürürlük
+tarihi yenilenir. Önemli bir değişiklik olursa uygulama içinde de bildirmeye
+çalışırım.</p>
+
+<h2>12. İletişim</h2>
+<p>Sorun, itirazın ya da "şu veri bende nasıl işleniyor?" diye merak ettiğin
+bir şey varsa yaz:
+<a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a>. Elimden geldiğince
+hızlı dönerim.</p>
+
+</main>
+
+<hr class="divider">
+
+<!-- ==================== ENGLISH ==================== -->
+<main id="en" lang="en">
+
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: 5 September 2026 · Last updated: 5 September 2026</p>
+
+<div class="callout">
+  <p><strong>In short:</strong> Hira has no server and no accounts. Your
+  worship data stays on your phone and is deleted along with the app. Your
+  location is used on your device to calculate prayer times and the qibla; it
+  is sent to OpenStreetMap only to look up your city name, to search an
+  address, and to find nearby mosques. To keep the app free, Google AdMob
+  serves ads, and Google processes the data involved in that.</p>
+</div>
+
+<h2>1. Whose policy is this?</h2>
+<p>I publish Hira on my own, as an independent developer. There is no company,
+no legal entity and no team. Every privacy question, request or complaint
+reaches me directly:</p>
+<ul>
+  <li>Email: <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a></li>
+</ul>
+<p>This policy covers the iOS and Android versions of
+<strong>Hira — Namaz Vakti, Kıble</strong>.</p>
+
+<h2>2. No account, no server</h2>
+<p>You do not sign up for Hira. I do not ask for your name, email, phone number
+or a password. There is no server of mine that the app connects to; no backend
+was ever built that collects, stores or sells your data. That is also why there
+is no "delete my account" address to write to — no account is ever created.</p>
+
+<h2>3. Data that stays on your phone</h2>
+<p>Everything the app keeps is stored in the private area the operating system
+reserves for each app (<code>UserDefaults</code> on iOS,
+<code>SharedPreferences</code> on Android), <strong>on your device
+only</strong>. None of it is sent to me, and I have no access to it:</p>
+<ul>
+  <li>Your settings: language, calculation method, Asr method, high-latitude
+      rule, time adjustments, Hijri calendar adjustment, adhan sound,
+      notification preferences, focus mode, ambient sound and volume.</li>
+  <li>Your chosen location: city label, latitude, longitude, elevation and
+      time zone.</li>
+  <li>The dhikr counter: the dhikr you selected, the count, your target, and
+      the custom dhikr text and meaning you typed yourself.</li>
+  <li>Your place in the Quran: the open surah, the ayah, font size and whether
+      you show the translation.</li>
+  <li>Your worship record: the prayers you marked as performed, your streak
+      counter, the state of your qada (make-up prayer) log and your totals.</li>
+  <li>Exemption days for women: menstruation days and cycle information, so
+      that your prayer record is counted correctly on those days. This record
+      also stays on your device only and is never sent anywhere.</li>
+  <li>The mosque finder's most recent results: cached on the device for at
+      most 10 areas and at most 7 days, so the list can still be shown when
+      you have no connection.</li>
+  <li>If you watched a rewarded ad, the end time of the ad-free period you
+      earned.</li>
+</ul>
+<p><strong>If you want to delete it:</strong> uninstalling the app is enough.
+Uninstalling removes all of this data from the device. I hold no backup of it
+and it cannot be recovered. (Your phone's own backup settings — iCloud or
+Google backup — may have included this data in a backup; that is under the
+control of your device settings.)</p>
+
+<h2>4. Location</h2>
+
+<h3>4.1 The calculation happens on your device</h3>
+<p>Prayer times and the qibla direction are calculated from your location
+<strong>entirely inside your phone</strong>. Nothing is sent to any server for
+that calculation. If you do not grant the location permission, the app keeps
+working; you can select your city by hand.</p>
+
+<h3>4.2 City name and address search (OpenStreetMap / Nominatim)</h3>
+<p>So that the screen can show the name of your city instead of "Current
+location", your coordinates (latitude and longitude) are sent to
+<code>nominatim.openstreetmap.org</code>, which returns a place name. In the
+same way, if you type a city or address into the search box, <strong>the text
+you typed</strong> is sent to the same service.</p>
+<p>These requests are made only for that one query. Once the answer arrives the
+job is done; the coordinates or search text that were sent are not stored
+anywhere on my side — I have no server to store them on.</p>
+
+<h3>4.3 Nearby mosques (Overpass API)</h3>
+<p>When you open the mosque finder, your coordinates and the search radius are
+sent to public Overpass servers, which query OpenStreetMap data. The app tries
+these public endpoints in order, moving on to the next if one does not answer:
+<code>overpass-api.de</code>, <code>overpass.kumi.systems</code>,
+<code>overpass.private.coffee</code>, <code>overpass.osm.ch</code>. These are
+publicly available servers run by volunteers; they are not operated by me, and
+each has its own usage and logging policy.</p>
+
+<h3>4.4 What do these services see?</h3>
+<p>As with any internet request, these services see the <strong>IP
+address</strong> the request comes from and the query that was sent (the
+coordinates, or the address you typed). The app does <strong>not</strong> attach
+any identity, user number or advertising identifier to these requests. These
+services belong to the OpenStreetMap community; for their own terms, see the
+<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap
+Foundation privacy policy</a>.</p>
+
+<h2>5. Quran text and recitation</h2>
+<p>Four surahs ship inside the app and work without an internet connection.
+When you open any other surah, the text is downloaded from
+<code>api.alquran.cloud</code> and the audio recitation from
+<code>everyayah.com</code>. A surah you have opened once is cached on your
+device and can be read offline afterwards.</p>
+<p>These requests carry only which surah or ayah you asked for; no identity of
+yours is sent. As with any web request, those servers see the IP address.</p>
+
+<h2>6. Ads (Google AdMob)</h2>
+<p>Hira is free and is supported by <strong>Google AdMob</strong> ads. Google
+serves the ads, and <strong>Google processes</strong> the data needed to show
+and measure them. According to Google's own disclosure, this data can
+include:</p>
+<ul>
+  <li>IP address,</li>
+  <li>in-app interactions (such as an ad being viewed or tapped),</li>
+  <li>diagnostics, crash and performance data,</li>
+  <li>the advertising identifier (IDFA on iOS, Advertising ID on Android) and
+      other device and account identifiers.</li>
+</ul>
+<p>You can read how Google uses this data at
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+<p>I run no ad server, no tracking infrastructure and no analytics tool. Apart
+from Google AdMob, the app contains no analytics, measurement or crash
+reporting SDK of any kind.</p>
+
+<h3>6.1 European Economic Area, United Kingdom and Switzerland</h3>
+<p>If you are in one of these regions, Google's consent form (UMP — User
+Messaging Platform) is shown to you before any ads begin. There you can allow
+personalised ads or choose <strong>non-personalised ads</strong>. The app does
+not start the ads SDK until you have given your answer in that form.</p>
+<p>If you want to change your decision later, you can reopen the same form from
+<em>Settings → Ad privacy options</em>. (That row only works in regions where
+consent is required.)</p>
+
+<h3>6.2 App Tracking Transparency on iOS</h3>
+<p>On iOS, whether the advertising identifier (IDFA) may be used for ad
+personalisation is decided by Apple's <strong>tracking permission
+prompt</strong>. You are asked, and <strong>your answer is respected</strong>:
+if you decline, the app does not use that identifier and ads are shown
+non-personalised. Declining does not switch off any feature — prayer times,
+qibla, the Quran and the dhikr counter all work exactly the same.</p>
+<p>To change your decision later, go to <em>Settings → Privacy &amp; Security →
+Tracking</em> and turn Hira's permission on or off.</p>
+
+<h3>6.3 Resetting or disabling the advertising identifier</h3>
+<ul>
+  <li><strong>iOS:</strong> in <em>Settings → Privacy &amp; Security →
+      Tracking</em>, turning off "Allow Apps to Request to Track" invalidates
+      the advertising identifier given to apps.</li>
+  <li><strong>Android:</strong> in <em>Settings → Google → Ads</em> (on some
+      devices <em>Settings → Privacy → Ads</em>) you can reset the advertising
+      ID or delete it entirely.</li>
+</ul>
+
+<h3>6.4 When ads are not shown</h3>
+<p>Ads are restricted so that they never get in the way of worship:</p>
+<ul>
+  <li>No ad at all is shown from <strong>10 minutes before</strong> a prayer
+      time until <strong>20 minutes after</strong> it has entered — the banner
+      also leaves the screen for that whole window.</li>
+  <li>A <strong>full-screen (interstitial) ad is never opened</strong> when you
+      switch to the Qibla tab; someone preparing to pray is not interrupted.
+      (The small banner at the bottom of the screen may still appear on the
+      Qibla screen outside the prayer-time window described above.)</li>
+  <li>No banner is shown while Focus Mode is on.</li>
+  <li>No full-screen ad opens while a Quran recitation or an ambient sound is
+      playing.</li>
+  <li>There are no ads during the first 2 minutes after you open the app, none
+      during the introduction screens, and no more than 5 in one session; at
+      least 12 minutes pass between two full-screen ads.</li>
+  <li>Ad content is capped at the <strong>"general audience" (G)</strong>
+      rating; nothing above the app's own age rating is requested.</li>
+</ul>
+<p>If you wish, you can watch a rewarded ad to earn a 6-hour ad-free period.
+That is entirely your choice.</p>
+
+<h2>7. Permissions and why they are asked for</h2>
+<ul>
+  <li><strong>Location:</strong> for prayer time and qibla calculation, the
+      city name and the mosque finder. If you decline, you choose your city by
+      hand.</li>
+  <li><strong>Motion sensors:</strong> so the qibla compass can detect which
+      way your phone is pointing. This data never leaves the device.</li>
+  <li><strong>Notifications:</strong> for the adhan and prayer time reminders.
+      Notifications are scheduled <strong>inside the device itself</strong>;
+      no server is contacted for them and no push notification is sent.</li>
+  <li><strong>Microphone:</strong> Hira <strong>does not record audio</strong>.
+      This permission is only requested by the audio system that plays the
+      adhan and the Quran recitations.</li>
+  <li><strong>Add to Photos:</strong> if you choose to save your streak card to
+      Photos, the image is added there. The app never reads or deletes your
+      photos.</li>
+  <li><strong>Vibration:</strong> for haptic feedback in the dhikr counter.</li>
+</ul>
+
+<h2>8. Sharing</h2>
+<p>If you choose to share your streak card, the image is first created in the
+device's temporary folder, and then your phone's own share sheet opens. You
+decide where to send it; I never see that image and never copy it anywhere.</p>
+
+<h2>9. Children's privacy</h2>
+<p>Hira is a worship app aimed at a <strong>general audience</strong>; it is
+not designed for, nor marketed to, children. I do not knowingly collect
+personal data from children — I have no server that collects personal data
+from anyone at all. Ad content is capped at the <strong>"general audience"
+(G)</strong> rating so that it stays in line with the app's age rating. If your
+child uses the app and you have a concern, write to me and we will look at it
+together.</p>
+
+<h2>10. Security</h2>
+<p>Every network request the app makes goes over HTTPS, encrypted. The data
+stored on your device is kept in the protected per-app area provided by the
+operating system and cannot be read by other apps.</p>
+
+<h2>11. If this policy changes</h2>
+<p>As the app changes, this page is updated too. The effective date at the top
+is renewed with every change. If something important changes, I will also try
+to say so inside the app.</p>
+
+<h2>12. Contact</h2>
+<p>If you have a problem, an objection, or you simply wonder "how is that piece
+of data handled?", write to me:
+<a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a>. I answer as quickly
+as I can.</p>
+
+</main>
+
+<footer>
+  <p>Hira — Namaz Vakti, Kıble · <code>app.hira.hira</code><br>
+  <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a></p>
+  <p>Bu sayfa hiçbir çerez kullanmaz, hiçbir izleme kodu içermez ve dışarıdan
+  hiçbir dosya yüklemez.<br>
+  This page uses no cookies, contains no tracking code and loads no external
+  resources.</p>
+</footer>
+
 </div>
 </body>
 </html>
-
