@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hira — Namaz Vakti, Kıble | İndir</title>
+<meta name="description" content="Hira: namaz vakitleri, ezan, kıble pusulası, Kur'an ve zikir. iPhone ve Android için ücretsiz indir.">
+
+<!-- Paylasildiginda (WhatsApp, Instagram, X) gorunen onizleme -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hira — Namaz Vakti, Kıble">
+<meta property="og:description" content="Namaz vakitleri, ezan, kıble ve Kur'an. Ücretsiz indir.">
+<meta property="og:url" content="https://cemgungor9.github.io/indir/">
+<meta name="twitter:card" content="summary">
+
+<script>
+// Cihaza gore magazaya yonlendirme.
+//
+// NEDEN SCRIPT GOVDEDEN ONCE: yonlendirme sayfa cizilmeden once olsun ki
+// telefondaki kullanici bir an bile ara sayfa gormesin. Masaustunde
+// yonlendirme YAPILMAZ; orada iki dugmeli sayfa gosterilir.
+(function () {
+  var IOS  = "https://apps.apple.com/app/id6804790929";
+  var PLAY = "https://play.google.com/store/apps/details?id=app.hira.hira";
+
+  var ua = navigator.userAgent || "";
+  var uaLower = ua.toLowerCase();
+
+  // iPadOS 13+ kendini "Macintosh" olarak tanitir; dokunmatik nokta sayisi
+  // ile ayirt ediliyor. Bu olmadan iPad kullanicilari masaustu sayfasinda
+  // kalirdi.
+  var isIPadOS = /macintosh/.test(uaLower) &&
+                 typeof navigator.maxTouchPoints === "number" &&
+                 navigator.maxTouchPoints > 1;
+
+  var isIOS = /iphone|ipad|ipod/.test(uaLower) || isIPadOS;
+  var isAndroid = /android/.test(uaLower);
+
+  var target = isIOS ? IOS : (isAndroid ? PLAY : null);
+
+  if (target) {
+    // replace(): geri tusuna basan kullanici bu ara sayfaya geri donmesin.
+    window.location.replace(target);
+  } else {
+    // Masaustu: sayfayi goster. (CSS'te varsayilan gizli; burada aciyoruz ki
+    // telefonda yonlendirme oncesi bir anlik icerik parlamasi olmasin.)
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("masaustu");
+    });
+  }
+})();
+</script>
+
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1c1b19;
+    --muted: #5d5a54;
+    --rule: #e3ded4;
+    --accent: #0d6b4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --surface: #1b1e23; --text: #e9e7e2;
+      --muted: #a7a49d; --rule: #2c3037; --accent: #6fd0aa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px; line-height: 1.6;
+    min-height: 100vh; display: flex; align-items: center;
+    justify-content: center; padding: 1.5rem;
+    /* Telefonda yonlendirme aninda icerik gorunmesin. */
+    visibility: hidden;
+  }
+  body.masaustu { visibility: visible; }
+  .kart {
+    max-width: 30rem; width: 100%; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 16px;
+    padding: 2rem 1.6rem; text-align: center;
+  }
+  h1 { font-size: 1.5rem; margin: 0 0 .3rem; }
+  .alt { color: var(--muted); margin: 0 0 1.6rem; font-size: .98rem; }
+  .dugmeler { display: flex; flex-direction: column; gap: .7rem; }
+  a.dugme {
+    display: block; padding: .9rem 1.1rem; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 1rem;
+    background: var(--accent); color: #fff;
+  }
+  a.dugme.ikincil {
+    background: transparent; color: var(--accent);
+    border: 1.5px solid var(--accent);
+  }
+  .not { margin: 1.5rem 0 0; font-size: .87rem; color: var(--muted); }
+  .not a { color: var(--accent); }
+</style>
+<noscript>
+  <style>body { visibility: visible !important; }</style>
+</noscript>
+</head>
+<body>
+
+<div class="kart">
+  <h1>Hira — Namaz Vakti, Kıble</h1>
+  <p class="alt">Namaz vakitleri, ezan, kıble pusulası, Kur'an ve zikir.<br>
+  Hesap yok, ücretsiz.</p>
+
+  <div class="dugmeler">
+    <a class="dugme" href="https://apps.apple.com/app/id6804790929">iPhone için indir — App Store</a>
+    <a class="dugme ikincil" href="https://play.google.com/store/apps/details?id=app.hira.hira">Android için indir — Google Play</a>
+  </div>
+
+  <p class="not">Bu bağlantıyı telefonda açarsan doğrudan kendi mağazana gider.<br>
+  <a href="https://cemgungor9.github.io/">Gizlilik politikası</a></p>
+</div>
+</body>
+</html>
