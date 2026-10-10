@@ -27,7 +27,7 @@
 <main>
 <h1>Vampir Köylü <span>☾</span> Vampire Village</h1>
 <p class="meta">Yayıncı / Publisher: Cem Güngör · <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a><br>
-Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.1</p>
+Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.2</p>
 <nav><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#destek">Destek / Support</a><a href="./">Oyuna git / Play</a></nav>
 
 <section id="tr" lang="tr">
@@ -37,7 +37,7 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.1</p>
 <ul>
 <li><strong>Masadaki adın ve simgen.</strong> Cihazında saklanır; oyun sırasında masadaki diğer oyunculara gönderilir. Bizde saklanmaz.</li>
 <li><strong>Oyun mesajları.</strong> Telefonlar arasındaki mesajları Supabase Realtime (AB, Frankfurt) anlık olarak aktarır ve saklamaz. Rol, gece hamlesi ve sonuçlar ev sahibinin telefonu ile her oyuncu arasında uçtan uca şifrelenir (ECDH + AES-GCM).</li>
-<li><strong>Adsız istatistik.</strong> Rastgele bir kurulum kimliği ile şu olayları kaydederiz: uygulama açılışı (bağlantıyla mı açıldı), masaya katılma, oyun başlangıcı (oyuncu sayısı, rol dağılımı, rol modu, uzaktan oyun ve âşıklar ayarı), oyun sonu (kazanan taraf, gece sayısı, süre, yarıda kaldı mı), Gece Yarısı paketinin nasıl açıldığı (video, video bulunamadı ya da web) ve "anlatıcı anlaşılır mıydı?" cevabı. Her olayla dil, platform ve sürüm de gider. Ad, e-posta, telefon ya da konum kaydetmeyiz. Veri Supabase üzerinde (AB) tutulur. Altyapı sağlayıcımız güvenlik amacıyla kısa süreli teknik kayıt (ör. IP) tutabilir.</li>
+<li><strong>Adsız istatistik.</strong> Uygulama her açıldığında yeniden üretilen ve cihazında saklanmayan rastgele bir oturum kimliğiyle şu olayları kaydederiz: uygulama açılışı (bağlantıyla mı açıldı), masaya katılma, oyun başlangıcı (oyuncu sayısı, rol dağılımı, rol modu, uzaktan oyun ve âşıklar ayarı), oyun sonu (kazanan taraf, gece sayısı, süre, yarıda kaldı mı), Gece Yarısı paketinin nasıl açıldığı (video, video bulunamadı ya da web) ve "anlatıcı anlaşılır mıydı?" cevabı. Her olayla dil, platform ve sürüm de gider. Ad, e-posta, telefon ya da konum kaydetmeyiz. Veri Supabase üzerinde (AB) tutulur. Altyapı sağlayıcımız güvenlik amacıyla kısa süreli teknik kayıt (ör. IP) tutabilir.</li>
 <li><strong>Yerel ağ (Wi-Fi) modu.</strong> Bilgisayarında çalışan sunucu üzerinden oynarken hiçbir veri internete çıkmaz.</li>
 </ul>
 <h3>Reklamlar (Google AdMob — yalnız Android ve iOS uygulaması)</h3>
@@ -66,7 +66,7 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.1</p>
 <ul>
 <li><strong>Your table name and sigil.</strong> Stored on your device and sent to the other players at your table during a game. Not stored by us.</li>
 <li><strong>Game messages.</strong> Messages between phones are relayed in real time by Supabase Realtime (EU, Frankfurt) and not stored. Roles, night actions and results are end-to-end encrypted between the host's phone and each player (ECDH + AES-GCM).</li>
-<li><strong>Anonymous statistics.</strong> With a random install identifier we record: app open (and whether it came from a link), joining a table, game start (player count, role setup, role mode, remote play and lovers settings), game end (winning side, nights, duration, whether it was abandoned), how the Midnight pack was unlocked (video, no video available, or web) and the "was the narrator clear?" answer. Each event also carries the language, platform and version. We do not record names, e-mail, phone numbers or location. Data is kept on Supabase (EU). Our infrastructure provider may keep short-lived technical logs (e.g. IP) for security.</li>
+<li><strong>Anonymous statistics.</strong> With a random session identifier that is created anew every time the app opens and is never stored on your device, we record: app open (and whether it came from a link), joining a table, game start (player count, role setup, role mode, remote play and lovers settings), game end (winning side, nights, duration, whether it was abandoned), how the Midnight pack was unlocked (video, no video available, or web) and the "was the narrator clear?" answer. Each event also carries the language, platform and version. We do not record names, e-mail, phone numbers or location. Data is kept on Supabase (EU). Our infrastructure provider may keep short-lived technical logs (e.g. IP) for security.</li>
 <li><strong>Local Wi-Fi mode.</strong> When playing through the server on your own computer, no data leaves your local network.</li>
 </ul>
 <h3>Ads (Google AdMob — Android and iOS app only)</h3>
