@@ -27,7 +27,7 @@
 <main>
 <h1>Vampir Köylü <span>☾</span> Vampire Village</h1>
 <p class="meta">Yayıncı / Publisher: Cem Güngör · <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a><br>
-Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.0</p>
+Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.1</p>
 <nav><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#destek">Destek / Support</a><a href="./">Oyuna git / Play</a></nav>
 
 <section id="tr" lang="tr">
@@ -37,12 +37,12 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.0</p>
 <ul>
 <li><strong>Masadaki adın ve simgen.</strong> Cihazında saklanır; oyun sırasında masadaki diğer oyunculara gönderilir. Bizde saklanmaz.</li>
 <li><strong>Oyun mesajları.</strong> Telefonlar arasındaki mesajları Supabase Realtime (AB, Frankfurt) anlık olarak aktarır ve saklamaz. Rol, gece hamlesi ve sonuçlar ev sahibinin telefonu ile her oyuncu arasında uçtan uca şifrelenir (ECDH + AES-GCM).</li>
-<li><strong>Adsız istatistik.</strong> Rastgele bir kurulum kimliği ile şu olayları kaydederiz: uygulama açılışı, oyun başlangıcı ve sonu (oyuncu sayısı, mod, süre, kazanan taraf), dil, platform, sürüm ve "anlatıcı anlaşılır mıydı?" cevabı. Ad, e-posta, telefon ya da konum kaydetmeyiz. Veri Supabase üzerinde (AB) tutulur. Altyapı sağlayıcımız güvenlik amacıyla kısa süreli teknik kayıt (ör. IP) tutabilir.</li>
+<li><strong>Adsız istatistik.</strong> Rastgele bir kurulum kimliği ile şu olayları kaydederiz: uygulama açılışı (bağlantıyla mı açıldı), masaya katılma, oyun başlangıcı (oyuncu sayısı, rol dağılımı, rol modu, uzaktan oyun ve âşıklar ayarı), oyun sonu (kazanan taraf, gece sayısı, süre, yarıda kaldı mı), Gece Yarısı paketinin nasıl açıldığı (video, video bulunamadı ya da web) ve "anlatıcı anlaşılır mıydı?" cevabı. Her olayla dil, platform ve sürüm de gider. Ad, e-posta, telefon ya da konum kaydetmeyiz. Veri Supabase üzerinde (AB) tutulur. Altyapı sağlayıcımız güvenlik amacıyla kısa süreli teknik kayıt (ör. IP) tutabilir.</li>
 <li><strong>Yerel ağ (Wi-Fi) modu.</strong> Bilgisayarında çalışan sunucu üzerinden oynarken hiçbir veri internete çıkmaz.</li>
 </ul>
 <h3>Reklamlar (Google AdMob — yalnız Android ve iOS uygulaması)</h3>
 <ul>
-<li>Oyun sırasında asla reklam çıkmaz. En fazla iki oyunda bir, oyunlar <strong>arasında</strong> geçiş reklamı gösterilebilir. "Gece Yarısı" rol paketini 24 saat açmak için <strong>isteğe bağlı</strong> ödüllü video izleyebilirsin. Reklam şeridi yoktur.</li>
+<li>Oyun sırasında asla reklam çıkmaz. Her cihazda en fazla iki oyunda bir ve en az 4 dakika arayla, oyunlar <strong>arasında</strong> geçiş reklamı gösterilebilir; yeni oyun reklam kapanınca başlar. "Gece Yarısı" rol paketini 24 saat açmak için <strong>isteğe bağlı</strong> ödüllü video izleyebilirsin. Reklam şeridi yoktur.</li>
 <li>Reklamı gösterebilmek için Google; reklam kimliğini (Android'de reklam kimliği, iPhone'da yalnız izin verirsen IDFA), IP adresini ve ondan çıkan kaba konumu, cihaz ve uygulama bilgisini, reklam gösterim ve tıklama bilgisini ve hata tanılama verisini işler. Ayrıntı: <a href="https://policies.google.com/technologies/partner-sites">Google iş ortaklarının sitelerini ve uygulamalarını kullandığınızda</a> ve <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>.</li>
 <li><strong>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre:</strong> reklamdan önce Google'ın rıza formu çıkar. Kararını sonradan <em>Ayarlar → Reklam gizlilik seçenekleri</em> satırından değiştirebilirsin.</li>
 <li>Tarayıcı (web) sürümünde reklam yoktur.</li>
@@ -50,7 +50,7 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.0</p>
 <h3>Anlatıcı sesi</h3>
 <p>Anlatıcı cihazının kendi metin-okuma motorunu kullanır. Bazı tarayıcılar çevrim içi sesler sunabilir; bu durumda okunacak metin tarayıcı üreticisinin hizmetine gidebilir. Ayarlardan anlatıcı sesini kapatıp yalnız yazı olarak görebilirsin.</p>
 <h3>İzinler</h3>
-<p>Uygulama yalnız internet ve titreşim kullanır. Kamera, mikrofon, konum, kişiler ya da fotoğraf izni istemez. Tek telefon modu tamamen çevrimdışı çalışır.</p>
+<p>Uygulama senden hiçbir izin istemez: kamera, mikrofon, konum, kişiler ya da fotoğraf kullanmaz. Android paketinde yalnız şu sistem izinleri bulunur: internet ve ağ durumu (masaya bağlanmak için), titreşim, ekranın açık kalması (oyun sırasında), reklam kimliği ve Android'in reklam hizmetleri (Google reklamları için; telefon ayarlarından sıfırlanabilir ya da kapatılabilir) ve reklam kütüphanesinin kısa süreli arka plan işi. iPhone'da reklam kimliği yalnız "izleme" iznini verirsen kullanılır. Tek telefon modu tamamen çevrimdışı çalışır.</p>
 <h3>Çocuklar</h3>
 <p>Oyun 13 yaş altı çocuklara yönelik değildir; içerikte hafif fantastik şiddet (vampir ısırığı, köy oylaması) vardır.</p>
 <h3>Silme</h3>
@@ -66,12 +66,12 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.0</p>
 <ul>
 <li><strong>Your table name and sigil.</strong> Stored on your device and sent to the other players at your table during a game. Not stored by us.</li>
 <li><strong>Game messages.</strong> Messages between phones are relayed in real time by Supabase Realtime (EU, Frankfurt) and not stored. Roles, night actions and results are end-to-end encrypted between the host's phone and each player (ECDH + AES-GCM).</li>
-<li><strong>Anonymous statistics.</strong> With a random install identifier we record: app open, game start and end (player count, mode, duration, winning side), language, platform, version and the "was the narrator clear?" answer. We do not record names, e-mail, phone numbers or location. Data is kept on Supabase (EU). Our infrastructure provider may keep short-lived technical logs (e.g. IP) for security.</li>
+<li><strong>Anonymous statistics.</strong> With a random install identifier we record: app open (and whether it came from a link), joining a table, game start (player count, role setup, role mode, remote play and lovers settings), game end (winning side, nights, duration, whether it was abandoned), how the Midnight pack was unlocked (video, no video available, or web) and the "was the narrator clear?" answer. Each event also carries the language, platform and version. We do not record names, e-mail, phone numbers or location. Data is kept on Supabase (EU). Our infrastructure provider may keep short-lived technical logs (e.g. IP) for security.</li>
 <li><strong>Local Wi-Fi mode.</strong> When playing through the server on your own computer, no data leaves your local network.</li>
 </ul>
 <h3>Ads (Google AdMob — Android and iOS app only)</h3>
 <ul>
-<li>Never during a game. At most every second game, an interstitial may be shown <strong>between</strong> games. You can <strong>choose</strong> to watch a rewarded video to unlock the "Midnight" role pack for 24 hours. There are no banners.</li>
+<li>Never during a game. At most every second game on a device, and at least 4 minutes apart, an interstitial may be shown <strong>between</strong> games; the next game starts after it is closed. You can <strong>choose</strong> to watch a rewarded video to unlock the "Midnight" role pack for 24 hours. There are no banners.</li>
 <li>To serve ads, Google processes the advertising identifier (on Android the advertising ID; on iPhone the IDFA only if you allow it), your IP address and the coarse location derived from it, device and app information, ad impression and click data, and diagnostics. Details: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
 <li><strong>EEA, UK and Switzerland:</strong> Google's consent form appears before any ad. You can change your choice later in <em>Settings → Ad privacy choices</em>.</li>
 <li>The browser (web) version has no ads.</li>
@@ -79,7 +79,7 @@ Yürürlük / Effective: 10.10.2026 · Sürüm / Version 1.0</p>
 <h3>Narrator voice</h3>
 <p>The narrator uses your device's built-in text-to-speech. Some browsers offer online voices; in that case the text to be spoken may be sent to the browser vendor's service. You can turn the voice off in Settings and read the narration as text.</p>
 <h3>Permissions</h3>
-<p>The app only uses the internet and vibration. It does not ask for camera, microphone, location, contacts or photos. One-phone mode works fully offline.</p>
+<p>The app asks you for no permissions: it does not use the camera, microphone, location, contacts or photos. The Android package only declares these system permissions: internet and network state (to reach the table), vibration, keeping the screen on (during a game), the advertising ID and Android's ad services (for Google's ads; you can reset or turn these off in your phone's settings), and a short background task used by the ads library. On iPhone the advertising identifier is used only if you allow tracking. One-phone mode works fully offline.</p>
 <h3>Children</h3>
 <p>The game is not directed at children under 13; it contains mild fantasy violence (vampire bites, village votes).</p>
 <h3>Deletion</h3>
