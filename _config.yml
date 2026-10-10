@@ -1,0 +1,2 @@
+# GitHub Pages (Jekyll): publish /.well-known (Android App Links for Vampir Köylü). Nothing else changes.
+include: [".well-known"]

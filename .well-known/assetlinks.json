@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.cemgungor.vampirkoylu",
+      "sha256_cert_fingerprints": [
+        "A2:BC:6F:74:0F:09:A9:03:4F:7F:BA:CF:94:5D:78:FA:95:D9:1A:52:AB:80:E8:1A:B0:F1:78:05:D5:1A:C7:7B",
+        "F7:13:C0:ED:1B:BF:A9:24:CC:B9:76:AE:82:00:41:B0:F1:38:54:52:6C:93:98:1D:BB:FA:6C:58:AE:73:09:E9"
+      ]
+    }
+  }
+]
