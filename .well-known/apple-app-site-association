@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["J86SVJFHG8.com.cemgungor.vampirkoylu"],
+        "components": [
+          { "/": "/vampir-koylu", "?": { "r": "*" }, "comment": "Vampir Köylü davet bağlantısı" },
+          { "/": "/vampir-koylu/", "?": { "r": "*" }, "comment": "Vampir Köylü davet bağlantısı" },
+          { "/": "/vampir-koylu/index.html", "?": { "r": "*" }, "comment": "Vampir Köylü davet bağlantısı" }
+        ]
+      }
+    ]
+  }
+}
