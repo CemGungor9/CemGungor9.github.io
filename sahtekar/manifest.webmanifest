@@ -1,0 +1,16 @@
+{
+  "name": "Sahtekâr",
+  "short_name": "Sahtekâr",
+  "description": "Everyone knows the secret word — except the impostor. A party game for your own phones or one phone passed around.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#130d26",
+  "theme_color": "#130d26",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
