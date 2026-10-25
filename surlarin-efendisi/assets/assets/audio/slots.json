@@ -1,0 +1,148 @@
+{
+  "product": "surlar",
+  "status": "filled: Phase 1 (24 Ekim 2026) own sounds; effects built with tool/make_audio.py from Kenney CC0 packs, music from the studio music set",
+  "format": "Effects: WAV, 22050 Hz mono, peak -6 dBFS. Music: MP3, loops.",
+  "resolution": "surlarBank (lib/product.dart): assets/audio/<slot> only; no legacy shared fallback, no other game's loop.",
+  "music": [
+    {
+      "slot": "music_loop.mp3",
+      "source": "CleytonKauffman — Children's March Theme, https://opengameart.org/content/childrens-march-theme (copied unchanged; /home/claude/music/out/surlarin-efendisi-loop.mp3)",
+      "licence": "CC0 1.0 Universal (OpenGameArt: \"License(s): CC0\"; /home/claude/music/out/MUSIC_SOURCES.md)",
+      "role": "main loop (episode hub + siege): playful cartoon march with trombone",
+      "sha256": "b28dfaf041981226"
+    }
+  ],
+  "cues": [
+    {
+      "slot": "cue_positive.wav",
+      "source": "Kenney music-jingles / Sax jingles/jingles_SAX04.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "short rising sax blip (small success)",
+      "seconds": 0.39,
+      "peakDbfs": -6.0,
+      "sha256": "100bf86a09806681"
+    },
+    {
+      "slot": "cue_negative.wav",
+      "source": "Kenney music-jingles / Sax jingles/jingles_SAX05.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "short falling sax blip (gentle miss)",
+      "seconds": 0.46,
+      "peakDbfs": -6.0,
+      "sha256": "beef5e5611d54351"
+    },
+    {
+      "slot": "cue_victory.wav",
+      "source": "Kenney music-jingles / Sax jingles/jingles_SAX02.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "rising cartoon sax phrase (castle courtyard cleared)",
+      "seconds": 0.87,
+      "peakDbfs": -6.0,
+      "sha256": "4e4038466cbee97d"
+    },
+    {
+      "slot": "cue_retry.wav",
+      "source": "Kenney music-jingles / Sax jingles/jingles_SAX01.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "falling cartoon sax phrase (the keep held, retry)",
+      "seconds": 0.89,
+      "peakDbfs": -6.0,
+      "sha256": "7d25a2304b1f0915"
+    }
+  ],
+  "sfx": [
+    {
+      "slot": "sfx_tap.wav",
+      "source": "Kenney rpg-audio / creak1.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "rope creak (sling pulled back)",
+      "seconds": 0.66,
+      "peakDbfs": -6.0,
+      "sha256": "aa52df9c76662a39"
+    },
+    {
+      "slot": "sfx_cannon.wav",
+      "source": "Kenney impact-sounds / impactPunch_medium_000.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "sling release thwack",
+      "seconds": 0.43,
+      "peakDbfs": -6.0,
+      "sha256": "7f4eacaa75f919b5"
+    },
+    {
+      "slot": "sfx_place.wav",
+      "source": "Kenney impact-sounds / impactWood_heavy_002.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "wooden crate hit",
+      "seconds": 0.31,
+      "peakDbfs": -6.0,
+      "sha256": "112813b336b4b2c9"
+    },
+    {
+      "slot": "sfx_clear.wav",
+      "source": "Kenney impact-sounds / impactMining_002.ogg (first 0.6 s)",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "stone crack",
+      "seconds": 0.6,
+      "peakDbfs": -6.0,
+      "sha256": "f853b0ab1a9c064f"
+    },
+    {
+      "slot": "sfx_combo.wav",
+      "source": "Kenney impact-sounds / impactPlate_heavy_001.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "powder keg blast (chain)",
+      "seconds": 0.35,
+      "peakDbfs": -6.0,
+      "sha256": "980070a5cc59d317"
+    },
+    {
+      "slot": "sfx_pop.wav",
+      "source": "Kenney impact-sounds / impactTin_medium_002.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "spring wall boing (bounce)",
+      "seconds": 0.13,
+      "peakDbfs": -6.0,
+      "sha256": "a700eaec94beb764"
+    },
+    {
+      "slot": "sfx_error.wav",
+      "source": "Kenney impact-sounds / impactGlass_heavy_001.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "lantern glass smash",
+      "seconds": 0.43,
+      "peakDbfs": -6.0,
+      "sha256": "6a80f4ac6949e9f7"
+    },
+    {
+      "slot": "sfx_whoosh.wav",
+      "source": "Kenney impact-sounds / impactSoft_medium_003.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "ball thuds into the grass (miss)",
+      "seconds": 0.14,
+      "peakDbfs": -6.0,
+      "sha256": "e61caf9ebe95ead4"
+    },
+    {
+      "slot": "sfx_star.wav",
+      "source": "Kenney impact-sounds / impactGlass_light_004.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "result lantern lights up",
+      "seconds": 0.21,
+      "peakDbfs": -6.0,
+      "sha256": "ffc9e728d09754fe"
+    },
+    {
+      "slot": "sfx_button.wav",
+      "source": "Kenney ui-audio / click3.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "comic button press",
+      "seconds": 0.08,
+      "peakDbfs": -6.0,
+      "sha256": "c8fe6e79a23c18ed"
+    }
+  ],
+  "usedInCode": "SiegeScene: tap = sling pulled (rope creak), cannon = release, place = wood hit, clear = stone crack, combo = keg chain, pop = spring wall bounce, error = lantern broken, whoosh = ball lands in the grass. Shell: star = result lantern lights, button = comic buttons. cue_* via PlaySessionController / StudioAudio.cue.",
+  "notSharedWith": "No Kenney file here appears in another game's slots.json (test/audio_slots_test.dart checks every sibling game).",
+  "licenceRule": "Record every file here (source pack, original file name, licence). Kenney packs are CC0 1.0; never reuse a file another game already uses."
+}

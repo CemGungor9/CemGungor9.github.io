@@ -1,0 +1,8 @@
+{
+  "version": "0.4.0+5",
+  "sourceCommit": "d9ba8647f5ab50f0d654c80316b74d76fb4995c3",
+  "game": "golge_sokagi",
+  "baseHref": "/golge-sokagi/",
+  "builtUtc": "2026-10-25T09:08:01.2009151Z",
+  "mainJsSha256": "e7240039a10b60212e4e699f39ff3fa1ec34737a80a805307b5b1b36222360cd"
+}

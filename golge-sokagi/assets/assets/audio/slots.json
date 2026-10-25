@@ -1,0 +1,158 @@
+{
+  "product": "golge",
+  "status": "filled: Phase 1 (24 Ekim 2026) own sounds; effects built with tool/make_audio.py from Kenney CC0 packs, music from the studio music set",
+  "format": "Effects: WAV, 22050 Hz mono, peak -6 dBFS. Music: MP3, loops.",
+  "resolution": "golgeBank (lib/product.dart): assets/audio/<slot> only; no legacy shared fallback, no other game's loop.",
+  "music": [
+    {
+      "slot": "music_loop.mp3",
+      "source": "John Bartmann — Tiptoe Past The Guard, https://freemusicarchive.org/music/John_Bartmann/hide-and-sneak/tiptoe-past-the-guard (copied unchanged; /home/claude/music/out/golge-sokagi-loop.mp3)",
+      "licence": "CC0 1.0 Universal (\"Tiptoe Past The Guard by John Bartmann is licensed under a CC0 1.0 Universal License.\"; /home/claude/music/out/MUSIC_SOURCES.md)",
+      "role": "main loop (city map, ledger and deliveries): sneaky tiptoe stealth tune",
+      "sha256": "acf8dcec884d900e"
+    }
+  ],
+  "cues": [
+    {
+      "slot": "cue_positive.wav",
+      "source": "Kenney music-jingles / Pizzicato jingles/jingles_PIZZI04.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "short tiptoe pizzicato lift (small success)",
+      "seconds": 0.56,
+      "peakDbfs": -6.0,
+      "sha256": "f4c5506ffa9a645e"
+    },
+    {
+      "slot": "cue_negative.wav",
+      "source": "Kenney music-jingles / Pizzicato jingles/jingles_PIZZI05.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "short falling pizzicato (spotted)",
+      "seconds": 0.54,
+      "peakDbfs": -6.0,
+      "sha256": "16751ccbb81f9bdd"
+    },
+    {
+      "slot": "cue_victory.wav",
+      "source": "Kenney music-jingles / Pizzicato jingles/jingles_PIZZI03.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "pizzicato phrase (letter delivered)",
+      "seconds": 1.15,
+      "peakDbfs": -6.0,
+      "sha256": "44fca334f5f51114"
+    },
+    {
+      "slot": "cue_retry.wav",
+      "source": "Kenney music-jingles / Pizzicato jingles/jingles_PIZZI08.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "pizzicato shrug (try the route again)",
+      "seconds": 0.57,
+      "peakDbfs": -6.0,
+      "sha256": "239d043ef8ff6e96"
+    }
+  ],
+  "sfx": [
+    {
+      "slot": "sfx_place.wav",
+      "source": "Kenney impact-sounds / footstep_concrete_002.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "courier footstep on cobbles",
+      "seconds": 0.11,
+      "peakDbfs": -6.0,
+      "sha256": "0b8b7c89257b7036"
+    },
+    {
+      "slot": "sfx_tap.wav",
+      "source": "Kenney interface-sounds / tick_004.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "pocket-watch tick (wait one turn)",
+      "seconds": 0.06,
+      "peakDbfs": -6.0,
+      "sha256": "1ff6800e8627beaa"
+    },
+    {
+      "slot": "sfx_clear.wav",
+      "source": "Kenney impact-sounds / impactGlass_medium_002.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "moon seal chime (seal picked up)",
+      "seconds": 0.54,
+      "peakDbfs": -6.0,
+      "sha256": "198cb8365c6fe47b"
+    },
+    {
+      "slot": "sfx_coin.wav",
+      "source": "Kenney impact-sounds / impactMetal_light_001.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "brass key clink (key picked up)",
+      "seconds": 0.25,
+      "peakDbfs": -6.0,
+      "sha256": "c483b7d2627d01d3"
+    },
+    {
+      "slot": "sfx_whoosh.wav",
+      "source": "Kenney rpg-audio / metalLatch.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "latch / shutter clack (lever)",
+      "seconds": 0.26,
+      "peakDbfs": -6.0,
+      "sha256": "fb09ab32c9ed8e60"
+    },
+    {
+      "slot": "sfx_pop.wav",
+      "source": "Kenney rpg-audio / bookFlip3.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "ledger page flip (undo a turn)",
+      "seconds": 0.23,
+      "peakDbfs": -6.0,
+      "sha256": "692ad96f32343154"
+    },
+    {
+      "slot": "sfx_error.wav",
+      "source": "Kenney impact-sounds / impactSoft_medium_000.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "soft bump (wall, or caught in the lantern)",
+      "seconds": 0.12,
+      "peakDbfs": -6.0,
+      "sha256": "5bb58a003c1629e4"
+    },
+    {
+      "slot": "sfx_combo.wav",
+      "source": "Kenney rpg-audio / doorOpen_1.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "post door creaks open (all moon seals)",
+      "seconds": 0.92,
+      "peakDbfs": -6.0,
+      "sha256": "0dd9c5ad173353ff"
+    },
+    {
+      "slot": "sfx_star.wav",
+      "source": "Kenney impact-sounds / impactWood_heavy_003.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "wax seal pressed onto the envelope",
+      "seconds": 0.31,
+      "peakDbfs": -6.0,
+      "sha256": "43a257ed68ba6409"
+    },
+    {
+      "slot": "sfx_reward.wav",
+      "source": "Kenney rpg-audio / bookPlace2.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "\"Teslim edildi\" postage stamp thump",
+      "seconds": 0.35,
+      "peakDbfs": -6.0,
+      "sha256": "e7f9428181731120"
+    },
+    {
+      "slot": "sfx_button.wav",
+      "source": "Kenney interface-sounds / click_001.ogg",
+      "licence": "CC0 1.0 (www.kenney.nl)",
+      "role": "typewriter key (buttons)",
+      "seconds": 0.1,
+      "peakDbfs": -6.0,
+      "sha256": "84869b002bbd96e7"
+    }
+  ],
+  "usedInCode": "ShadowScene: place = courier footstep, tap = wait tick, clear = moon seal, coin = key, whoosh = lever/shutter latch, pop = undo page flip, error = bump into a wall or caught, combo = post door opens (all moon seals). Shell: star = wax seal pressed, reward = \"Teslim edildi\" stamp, button = typewriter-key buttons. cue_* via PlaySessionController / StudioAudio.cue and the scene's feedback.",
+  "notSharedWith": "No Kenney file here appears in another game's slots.json (test/audio_slots_test.dart checks every sibling game; on 24 Oct also checked against the ayrisma-* worktrees). No file is byte-identical to another game's audio.",
+  "notAvailable": "Distant dog bark and lantern sizzle (requested in docs/25 row 9) have no CC0 source in the local Kenney packs; not shipped.",
+  "licenceRule": "Record every file here (source pack, original file name, licence). Kenney packs are CC0 1.0; never reuse a file another game already uses."
+}

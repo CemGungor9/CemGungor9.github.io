@@ -1,0 +1,8 @@
+{
+  "version": "0.4.0+5",
+  "sourceCommit": "5eead5735c2d3494b222ecfcb96c8cd6eb774d86",
+  "game": "isik_ustasi",
+  "baseHref": "/isik-ustasi/",
+  "builtUtc": "2026-10-25T09:03:57.8241575Z",
+  "mainJsSha256": "5c94465f525fe494a3ab8eb0e4ba6cb49e46295ca189bf0268271db377967ca0"
+}

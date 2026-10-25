@@ -1,0 +1,150 @@
+{
+  "product": "isik",
+  "status": "filled: CC0 ambient loop (Umplix) + synthesised glass bells and two processed Kenney CC0 glass taps for Işık Ustası",
+  "format": "effects/cues: WAV, 22050 Hz, mono, 16-bit, peak -6 dBFS (UI sounds lower); music: MP3 (studio music pass)",
+  "generator": "python3 -I tool/make_audio.py /home/claude/kenney-dl/x /home/claude/music/out/isik-ustasi-loop.mp3 assets/audio (numpy + ffmpeg; fixed seed, byte-identical reruns)",
+  "melody": "LightScene.noteSlots = [pop, star, combo, reward, clear] = C5 D5 E5 G5 A5; LightScene.melodies picks three per constellation. Each ring lit in play rings its note; the ritual replays them and resolves on cue_positive.",
+  "music": [
+    {
+      "slot": "music_loop.mp3",
+      "role": "ambient loop (sky + board)",
+      "file": "assets/audio/music_loop.mp3",
+      "seconds": 85.394,
+      "source": "\"A Block in Space\" by Umplix, https://opengameart.org/content/a-block-in-space (studio music pass /home/claude/music/out/isik-ustasi-loop.mp3, copied unchanged)",
+      "licence": "CC0 1.0 (OpenGameArt: \"License(s): CC0\")",
+      "sha256": "8db1b93da7e550aa49b4e3dac6a7a0b2346da2c4ae679d83bde2911a5f05f12e"
+    }
+  ],
+  "cues": [
+    {
+      "slot": "cue_positive.wav",
+      "role": "tonic resolution: C–E–G–C glass arpeggio, the end of every level's tune (result ritual)",
+      "file": "assets/audio/cue_positive.wav",
+      "seconds": 2.4,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "a2156f91229cb6aebef9a66ed2e49fc9438d87735b3f6b0104dc2ed74b609f4b"
+    },
+    {
+      "slot": "cue_negative.wav",
+      "role": "gentle low glass (reserved)",
+      "file": "assets/audio/cue_negative.wav",
+      "seconds": 0.7,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "c38575a47584503195b7d2bb4a0339f4e1d48dbe29d72f0df9f9e9ca6124c819"
+    },
+    {
+      "slot": "cue_victory.wav",
+      "role": "ambient pad swell under the result ritual (C–G–E pad + high sparkles)",
+      "file": "assets/audio/cue_victory.wav",
+      "seconds": 3.2,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "e085792518035a2b3c4af2b5ca9fcd235d5f60068eec22b283e4f7cd7919b795"
+    },
+    {
+      "slot": "cue_retry.wav",
+      "role": "soft falling pair A4–E4 (no loss exists; slot contract)",
+      "file": "assets/audio/cue_retry.wav",
+      "seconds": 1.4,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "42f9465a58507bd539af9fed8e598cf86c0f6dc7e992a8a1f3c042096f845127"
+    }
+  ],
+  "sfx": [
+    {
+      "slot": "sfx_pop.wav",
+      "role": "ring note 1: C5 glass bell",
+      "file": "assets/audio/sfx_pop.wav",
+      "seconds": 1.6,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "f42d8758f240f63ae311fa3ed844c4aaf538eece57cd0a0c26ace2840ffc80c4"
+    },
+    {
+      "slot": "sfx_star.wav",
+      "role": "ring note 2: D5 glass bell",
+      "file": "assets/audio/sfx_star.wav",
+      "seconds": 1.6,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "5e5c4deb8cfa525bdb4251d45378d9847245c7d6548e37228cadb7184a1715f3"
+    },
+    {
+      "slot": "sfx_combo.wav",
+      "role": "ring note 3: E5 glass bell",
+      "file": "assets/audio/sfx_combo.wav",
+      "seconds": 1.6,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "bd8a84b8f1130d3b4d6460e2507830e0b1009dd9a70afb5da2bf707aefe7a7ae"
+    },
+    {
+      "slot": "sfx_reward.wav",
+      "role": "ring note 4: G5 glass bell",
+      "file": "assets/audio/sfx_reward.wav",
+      "seconds": 1.6,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "e1eb52512d70f24ffa2b0759829da467838fc35642c899ced539feb6ff272e73"
+    },
+    {
+      "slot": "sfx_clear.wav",
+      "role": "ring note 5: A5 glass bell",
+      "file": "assets/audio/sfx_clear.wav",
+      "seconds": 1.6,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "cf25d5beb17b84f2c55405a5f6e81d4c52df4e34099c943180038284e15dcfcb"
+    },
+    {
+      "slot": "sfx_place.wav",
+      "role": "mirror / shutter / prism turn",
+      "file": "assets/audio/sfx_place.wav",
+      "seconds": 0.32,
+      "source": "kenney_impact-sounds/Audio/impactGlass_light_002.ogg (pitched ×1.25, 0.32 s) + synthesised G6 glint",
+      "licence": "Kenney CC0 1.0 (kenney.nl) + original",
+      "sha256": "ed2436d8fc3d5edf7f4f9355424799e1842b68fb1f90011abe3adbb628a0a3cb"
+    },
+    {
+      "slot": "sfx_tap.wav",
+      "role": "icon tap (inspect, undo, restart)",
+      "file": "assets/audio/sfx_tap.wav",
+      "seconds": 0.18,
+      "source": "kenney_impact-sounds/Audio/impactGlass_light_000.ogg (pitched ×1.5, 0.18 s)",
+      "licence": "Kenney CC0 1.0 (kenney.nl)",
+      "sha256": "bebb173c12a0d63fad2bd4aea84e5933acbd1d0a1d65d227ffcce500b2ebde4c"
+    },
+    {
+      "slot": "sfx_button.wav",
+      "role": "UI glass tick",
+      "file": "assets/audio/sfx_button.wav",
+      "seconds": 0.06,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "db198232895a522cc288a6d84f77d7dafbd5e75b8d2a858269ca16d09b35a15d"
+    },
+    {
+      "slot": "sfx_whoosh.wav",
+      "role": "camera flies into a star (rising air + shimmer)",
+      "file": "assets/audio/sfx_whoosh.wav",
+      "seconds": 1.1,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "e63d840183ee61d5b39ea9717731db42da22db32622d6f9f7dcf962ee60be594"
+    },
+    {
+      "slot": "sfx_error.wav",
+      "role": "a ring went dark / dark star tapped (soft low glass)",
+      "file": "assets/audio/sfx_error.wav",
+      "seconds": 0.5,
+      "source": "original (Oyun Atölyesi, synthesised in tool/make_audio.py)",
+      "licence": "original",
+      "sha256": "fb230e5e3f7d72a4d648bb87f68473216be1d833880c330999d5b999aa05db7e"
+    }
+  ],
+  "notShared": "No file is byte-identical to any audio of another Atölye game (checked against every branch on 24 Oct 2026; test/audio_slots_test.dart re-checks the working tree).",
+  "licenceRule": "Record every file here (source pack, original file name, licence). Kenney packs are CC0 1.0; never reuse a file another game already uses."
+}
