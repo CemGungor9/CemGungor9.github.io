@@ -41,12 +41,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta property="og:title" content="Vampir Köylü" />
     <meta property="og:description" content="Masaya katıl — telefonunla oyna. / Join the table with your phone." />
-    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicon-48.png" type="image/png" sizes="48x48" />
     <link rel="apple-touch-icon" href="./icon-192.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
+    <!-- the first screen's painting and crest start loading before the script runs -->
+    <link rel="preload" as="image" href="./art/home/home-hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./art/brand/emblem.webp" type="image/webp" />
     <title>Vampir Köylü</title>
-    <script type="module" crossorigin src="./assets/index-DwHEwvGo.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DIRCFUIj.css">
+    <script type="module" crossorigin src="./assets/index-Bvjr8Nfd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CTUeLlhr.css">
   </head>
   <body>
     <div id="root"></div>
