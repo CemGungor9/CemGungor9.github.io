@@ -2,7 +2,7 @@
 """Builds the per-app landing pages (/<slug>/index.html and /<slug>/en/index.html).
 
 Sources are the store kits in the game repositories; nothing here is hand-drawn.
-Run: python3 _tanitim/build.py studio=<path> derbi=<path> emlak=<path> [slug ...]
+Run: python3 _tanitim/build.py studio=<path> derbi=<path> emlak=<path> apartman=<path> [slug ...]
 An app whose folder root already holds another page sets "path" (for example
 "emlak-yildizi/oyun") and "privacy" (link to its privacy page, relative to the Turkish page).
 The folder name starts with an underscore so GitHub Pages (Jekyll) does not publish it.
@@ -225,6 +225,8 @@ def page(app, lang, pal, faces, n_shots):
         for i in range(1, n_shots + 1)
     )
     css_faces = "".join(faces).replace("url(tanitim/", f"url({base}tanitim/")
+    if not faces:  # no bundled game font: the system face needs a real display weight
+        css_faces = "h1{font-weight:800;letter-spacing:-.02em}"
     e = html.escape
     return f"""<!doctype html>
 <html lang="{lang}">
@@ -245,9 +247,9 @@ def page(app, lang, pal, faces, n_shots):
 <meta property="og:image" content="{SITE}/{slug}/tanitim/hero-{lang}.jpg">
 <meta property="og:url" content="{url}">
 <style>
-{css_faces}
+{css_faces if faces else ""}
 :root{{--bg:{pal["bg"]};--ink:{pal["ink"]};--muted:{pal["muted"]};--line:{pal["line"]};--accent:{pal["accent"]};--on-accent:{pal["on_accent"]}}}
-{CSS}</style>
+{CSS}{"" if faces else css_faces}</style>
 </head>
 <body>
 <header class="poster"><img src="{base}tanitim/hero-{lang}.jpg" width="1024" height="500" alt="{e(d["name"])}. {e(d["subtitle"])}."></header>

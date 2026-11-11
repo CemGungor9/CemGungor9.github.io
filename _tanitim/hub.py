@@ -49,7 +49,7 @@ GROUPS = [
          "Gizli rol ve blöf oyunu. 5–10 oyuncu.", "Hidden-role party game. 5–10 players.", "web"),
     ]),
     ("Yönetim ve kariyer", "Management and career", [
-        ("apartman", "apartman/", None, "Apartman", "Apartman",
+        ("apartman", "apartman/oyun/", "apartman/oyun/tanitim/icon.png", "Apartman", "Apartman",
          "Papatya Apartmanı'nın yöneticisi sensin: aidat, tamir, komşu ve genel kurul.",
          "You run Papatya Apartments: dues, repairs, neighbours and residents' meetings.", "ios"),
         ("emlak-yildizi", "emlak-yildizi/oyun/", "emlak-yildizi/oyun/tanitim/icon.png", "Emlak Yıldızı", "Realty Star",
