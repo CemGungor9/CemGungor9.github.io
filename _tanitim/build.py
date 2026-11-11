@@ -2,7 +2,9 @@
 """Builds the per-app landing pages (/<slug>/index.html and /<slug>/en/index.html).
 
 Sources are the store kits in the game repositories; nothing here is hand-drawn.
-Run: python3 _tanitim/build.py <studio-root> <derbi-root> [slug ...]
+Run: python3 _tanitim/build.py studio=<path> derbi=<path> emlak=<path> [slug ...]
+An app whose folder root already holds another page sets "path" (for example
+"emlak-yildizi/oyun") and "privacy" (link to its privacy page, relative to the Turkish page).
 The folder name starts with an underscore so GitHub Pages (Jekyll) does not publish it.
 """
 import colorsys
@@ -197,7 +199,7 @@ footer span{flex:1 0 100%}
 def page(app, lang, pal, faces, n_shots):
     t = TEXT[lang]
     d = app[lang]
-    slug = app["slug"]
+    slug = app.get("path", app["slug"])
     base = "" if lang == "tr" else "../"
     other = "en/" if lang == "tr" else "../"
     url = f"{SITE}/{slug}/" + ("" if lang == "tr" else "en/")
@@ -253,30 +255,31 @@ def page(app, lang, pal, faces, n_shots):
 <p class="free">{t["free"]}</p>
 <ul class="shots" aria-label="{t["shots"]}">{shots}</ul>
 </main>
-<footer><span>{t["by"]}</span><a href="{base}privacy.html">{t["privacy"]}</a><a href="{other}" lang="{'en' if lang == 'tr' else 'tr'}">{t["other"]}</a></footer>
+<footer><span>{t["by"]}</span><a href="{base}{app.get("privacy", "privacy.html")}">{t["privacy"]}</a><a href="{other}" lang="{'en' if lang == 'tr' else 'tr'}">{t["other"]}</a></footer>
 </body>
 </html>
 """
 
 
-def build(app, studio: Path, derbi: Path):
-    src = (derbi if app["repo"] == "derbi" else studio) / app["root"]
-    out = ROOT / app["slug"]
+def build(app, roots):
+    src = roots[app["repo"]] / app["root"]
+    out = ROOT / app.get("path", app["slug"])
     assets = out / "tanitim"
     assets.mkdir(parents=True, exist_ok=True)
+    names = app.get("shot_names")
     Image.open(src / app["icon"]).convert("RGBA").resize((192, 192), Image.LANCZOS).save(assets / "icon.png", optimize=True)
-    n = app.get("shots", 4)
+    n = len(names) if names else app.get("shots", 4)
     for lang in ("tr", "en"):
         hero = Image.open(src / app["hero"].format(lang=lang)).convert("RGB")
         if hero.size != (1024, 500):
             hero = hero.resize((1024, 500), Image.LANCZOS)
         hero.save(assets / f"hero-{lang}.jpg", quality=86, optimize=True, progressive=True)
         for i in range(1, n + 1):
-            shot = Image.open(src / app["shot"].format(lang=lang, i=i, i2=f"{i:02d}")).convert("RGB")
+            shot = Image.open(src / app["shot"].format(lang=lang, i=i, i2=f"{i:02d}", name=names[i - 1] if names else "")).convert("RGB")
             shot.resize((540, 960), Image.LANCZOS).save(assets / f"{lang}-{i}.webp", quality=80, method=6)
     pal = palette(assets / "hero-tr.jpg", app.get("palette"))
     if app["repo"] == "derbi":
-        faces = derbi_fonts(derbi, assets)
+        faces = derbi_fonts(roots["derbi"], assets)
     else:
         faces = []
         for name, key in (("Display", "display"), ("Body", "body")):
@@ -296,13 +299,16 @@ def build(app, studio: Path, derbi: Path):
 
 
 if __name__ == "__main__":
-    studio, derbi = Path(sys.argv[1]), Path(sys.argv[2])
-    only = set(sys.argv[3:])
+    roots = {k: Path(v) for k, v in (a.split("=", 1) for a in sys.argv[1:] if "=" in a)}
+    only = {a for a in sys.argv[1:] if "=" not in a}
     apps = json.loads((Path(__file__).parent / "apps.json").read_text(encoding="utf-8"))
     for app in apps:
         if only and app["slug"] not in only:
             continue
-        existing = ROOT / app["slug"] / "index.html"
+        if app["repo"] not in roots:
+            print("skip", app["slug"], "(no source root given)")
+            continue
+        existing = ROOT / app.get("path", app["slug"]) / "index.html"
         if existing.exists() and "tanitim/hero-" not in existing.read_text(encoding="utf-8", errors="ignore"):
             raise SystemExit(f"{existing} exists and is not a landing page; refusing to overwrite")
-        print(app["slug"], build(app, studio, derbi))
+        print(app["slug"], build(app, roots))
