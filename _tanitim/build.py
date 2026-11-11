@@ -32,6 +32,7 @@ TEXT = {
         "soon_android": "Google Play'de yakında.",
         "soon_ios": "App Store'da yakında.",
         "privacy": "Gizlilik politikası",
+        "more": "Diğer oyunlar",
         "other": "English",
         "by": "Cem Güngör tarafından yapıldı.",
         "shots": "Oyundan görüntüler",
@@ -44,6 +45,7 @@ TEXT = {
         "soon_android": "Coming soon to Google Play.",
         "soon_ios": "Coming soon to the App Store.",
         "privacy": "Privacy policy",
+        "more": "More games",
         "other": "Türkçe",
         "by": "Made by Cem Güngör.",
         "shots": "Screenshots",
@@ -203,6 +205,8 @@ def page(app, lang, pal, faces, n_shots):
     base = "" if lang == "tr" else "../"
     other = "en/" if lang == "tr" else "../"
     url = f"{SITE}/{slug}/" + ("" if lang == "tr" else "en/")
+    depth = slug.count("/") + 1
+    hub = "../" * depth + "oyunlar/" if lang == "tr" else "../" * (depth + 1) + "oyunlar/en/"
     ios, android = app.get("ios"), app.get("android")
     get = []
     if ios:
@@ -255,7 +259,7 @@ def page(app, lang, pal, faces, n_shots):
 <p class="free">{t["free"]}</p>
 <ul class="shots" aria-label="{t["shots"]}">{shots}</ul>
 </main>
-<footer><span>{t["by"]}</span><a href="{base}{app.get("privacy", "privacy.html")}">{t["privacy"]}</a><a href="{other}" lang="{'en' if lang == 'tr' else 'tr'}">{t["other"]}</a></footer>
+<footer><span>{t["by"]}</span><a href="{hub}">{t["more"]}</a><a href="{base}{app.get("privacy", "privacy.html")}">{t["privacy"]}</a><a href="{other}" lang="{'en' if lang == 'tr' else 'tr'}">{t["other"]}</a></footer>
 </body>
 </html>
 """
