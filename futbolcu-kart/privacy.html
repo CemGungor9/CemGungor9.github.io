@@ -49,6 +49,7 @@
   <tr><td>IP adresinin tek yönlü özeti</td><td>Kötüye kullanımı sınırlamak (hız limiti); IP'nin kendisi saklanmaz</td><td>Birkaç dakika</td></tr>
   <tr><td>Ödüllü reklam doğrulama kaydı</td><td>Reklamı izleyene ödülü bir kez vermek</td><td>2 gün (talep), oturumla birlikte (fiş)</td></tr>
   <tr><td>Kulübüm (1.1 ve sonrası): kart koleksiyonun, jeton bakiyen, açtığın paketlerin günlük sayısı, pazardan aldığın kartlar ve kayıtlı kadron</td><td>Kartlarını, pazarı ve "En iyi kadrolar" listesini yürütmek; kadronu sıralamada göstermek</td><td>Kulübünü son kullanmandan 400 gün sonra</td></tr>
+  <tr><td>Transfer pazarı ilanların (kart, fiyat, süre, satıldıysa alıcı) ve Kadro Ligi maçların ile haftalık puanın</td><td>Oyuncular arası kart alım satımı ve Kadro Ligi</td><td>Kapanan ilanlar 30 gün; lig kayıtları 60 gün</td></tr>
 </table>
 <p>Seviye, kazandığın kart paketleri ve ayarlar yalnızca cihazında tutulur. Albümün 1.1 sürümünden itibaren Kulübüm'e taşınır ve sunucuda saklanır; paketler sunucuda açılır.</p>
 </section>
@@ -60,12 +61,12 @@
 
 <section>
 <h2>Paylaşım</h2>
-<p>Verilerini satmıyoruz. Sunucu altyapımız Cloudflare'de (Workers ve D1) çalışır; Cloudflare verileri bizim adımıza işler. Reklamlar için yukarıdaki Google AdMob kullanılır. Görünen adın ve maç sonuçların birlikte oynadığın kişilerce ve sıralamada görülebilir. Kadronu kaydedersen görünen adın, kadrondaki 11 kart ve kadro puanın "En iyi kadrolar" listesinde herkese görünür.</p>
+<p>Verilerini satmıyoruz. Sunucu altyapımız Cloudflare'de (Workers ve D1) çalışır; Cloudflare verileri bizim adımıza işler. Reklamlar için yukarıdaki Google AdMob kullanılır. Görünen adın ve maç sonuçların birlikte oynadığın kişilerce ve sıralamada görülebilir. Kadronu kaydedersen görünen adın, kadrondaki 11 kart ve kadro puanın "En iyi kadrolar" listesinde, Kadro Ligi'ndeki puanın lig tablosunda herkese görünür; kadron başka oyuncuların lig maçlarında rakip olarak görünebilir. Transfer pazarında satıcının adı gösterilmez. Jeton ve kartlar gerçek paraya çevrilemez.</p>
 </section>
 
 <section id="silme">
 <h2>Silme ve hakların</h2>
-<p><b>Uygulamadan:</b> Profil → Veri ve gizlilik → "Misafir kaydımı sil". Bu işlem oturumunu, maç sonuçlarını, sıralama kaydını, günlük puanlarını, turnuva üyeliklerini, Kulübüm'ü (kartlar, jeton, kadro), bildirim/engel kayıtlarını ve katıldığın odaları sunucudan siler. Cihazdaki ilerleme uygulamayı kaldırınca silinir.</p>
+<p><b>Uygulamadan:</b> Profil → Veri ve gizlilik → "Misafir kaydımı sil". Bu işlem oturumunu, maç sonuçlarını, sıralama kaydını, günlük puanlarını, turnuva üyeliklerini, Kulübüm'ü (kartlar, jeton, kadro, ilanlar, lig kayıtları), bildirim/engel kayıtlarını ve katıldığın odaları sunucudan siler. Cihazdaki ilerleme uygulamayı kaldırınca silinir.</p>
 <p><b>E-postayla:</b> Uygulamaya erişemiyorsan <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a> adresine görünen adını ve yaklaşık oynadığın tarihi yaz; kaydını 30 gün içinde sileriz. KVKK ve GDPR kapsamındaki erişim, düzeltme ve itiraz hakların için de bu adresi kullanabilirsin.</p>
 </section>
 
@@ -110,6 +111,7 @@
   <tr><td>One-way hash of your IP address</td><td>Abuse prevention (rate limits); the IP itself is not stored</td><td>A few minutes</td></tr>
   <tr><td>Rewarded-ad verification record</td><td>Grant an ad reward exactly once</td><td>2 days (claim), with the session (receipt)</td></tr>
   <tr><td>My Club (1.1 and later): your card collection, token balance, daily count of opened packs, cards bought in the market and your saved squad</td><td>Run your cards, the market and the "Best squads" list; show your squad in the rankings</td><td>400 days after you last used your club</td></tr>
+  <tr><td>Your transfer market listings (card, price, duration, buyer if sold) and your Squad League matches and weekly points</td><td>Card trading between players and the Squad League</td><td>Closed listings 30 days; league records 60 days</td></tr>
 </table>
 <p>Your level, the card packs you earn and your settings stay on your device. From version 1.1 your album moves to My Club and is kept on our server; packs are opened on the server.</p>
 </section>
@@ -121,12 +123,12 @@
 
 <section>
 <h2>Sharing</h2>
-<p>We do not sell your data. Our backend runs on Cloudflare (Workers and D1), which processes data on our behalf. Google AdMob is used for ads as described above. Your display name and match results are visible to the people you play with and on leaderboards. If you save a squad, your display name, its 11 cards and its score are visible to everyone in the "Best squads" list.</p>
+<p>We do not sell your data. Our backend runs on Cloudflare (Workers and D1), which processes data on our behalf. Google AdMob is used for ads as described above. Your display name and match results are visible to the people you play with and on leaderboards. If you save a squad, your display name, its 11 cards and its score are visible to everyone in the "Best squads" list, your Squad League points in the league table, and your squad can appear as an opponent in other players' league matches. Seller names are not shown in the transfer market. Tokens and cards can never be turned into real money.</p>
 </section>
 
 <section id="delete">
 <h2>Deletion and your rights</h2>
-<p><b>In the app:</b> Profile → Data and privacy → "Delete my guest record". This deletes your session, match results, leaderboard entry, daily scores, tournament memberships, My Club (cards, tokens, squad), reports/blocks and rooms you joined from our server. On-device progress is removed when you uninstall the app.</p>
+<p><b>In the app:</b> Profile → Data and privacy → "Delete my guest record". This deletes your session, match results, leaderboard entry, daily scores, tournament memberships, My Club (cards, tokens, squad, listings, league records), reports/blocks and rooms you joined from our server. On-device progress is removed when you uninstall the app.</p>
 <p><b>By email:</b> if you cannot open the app, write to <a href="mailto:cemgnr46@gmail.com">cemgnr46@gmail.com</a> with your display name and roughly when you played; we delete the record within 30 days. Use the same address for access, correction or objection requests under GDPR and KVKK.</p>
 </section>
 
